@@ -5,10 +5,11 @@ import privateRoutes from "./routes/privateRoutes";
 import RequireAuth from "./authentication/RequireAuth";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
+import ProductProvider from "./context/ProductProvider";
 
 function App() {
   return (
-    <>
+    <ProductProvider>
       <Navbar />
       <Routes>
         {/* publicRoutes  */}
@@ -24,7 +25,7 @@ function App() {
         {/* dashboard  */}
       </Routes>
       <Footer />
-    </>
+    </ProductProvider>
   );
 }
 
